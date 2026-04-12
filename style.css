@@ -1,0 +1,275 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.logo-mario {
+
+    height: 300px;
+}
+
+
+.logo-mario-luigi {
+
+
+    height: 500px;
+
+
+
+}
+
+button {
+
+    color: white;
+    background-color: hsl(0, 98%, 43%);
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+
+.efeito-butao a {
+
+
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    background-color: hsl(0, 98%, 43%);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.efeito-butao a:hover {
+    background-color: hsl(0, 90%, 35%);
+    width: 230px;
+    height: 55px;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+
+body {
+
+    height: 100vh;
+    color: rgb(253, 253, 253);
+
+}
+
+.caixa-principal {
+
+    width: 40%;
+
+}
+
+
+.caixa-mãe {
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+    justify-content: space-around;
+}
+
+.caixa-video {
+
+    position: fixed;
+    z-index: -1;
+    top: 0;
+
+}
+
+video {
+
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+
+}
+
+.mascara {
+
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+
+}
+
+.link-whatsapp img {
+
+    height: 70px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+
+}
+
+.cabecalho {
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+
+
+}
+
+.cabecalho img {
+
+    height: 60px;
+
+}
+
+.cabecalho a {
+
+    cursor: pointer;
+    font-size: 23px;
+    color: white;
+
+
+}
+
+.cabecalho a:hover {
+
+    color: hsl(0, 98%, 43%);
+    font-size: 27px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.formulario-fale-conosco {
+
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    left: -320px;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 20px;
+    transition: left 1s ease-in-out;
+
+}
+
+input {
+
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    padding-left: 8px;
+    outline-color: rgb(25, 187, 0);
+
+}
+
+textarea {
+
+    height: 100px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    padding-left: 8px;
+    outline-color: rgb(25, 187, 0);
+
+}
+
+.mascara-formulario {
+
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+}
+
+/* --- Responsividade para Celulares e Tablets --- */
+@media (max-width: 850px) {
+    .caixa-mãe {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 40px;
+        padding-top: 150px; /* Para não ficar embaixo do cabeçalho */
+        height: auto;
+    }
+
+    .caixa-principal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixa-principal p {
+        margin-bottom: 15px;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .cabecalho img {
+        height: 50px;
+    }
+
+    .logo-mario {
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .logo-mario-luigi {
+        height: auto;
+        max-width: 100%;
+        width: 320px; /* Ajuste proporcional para evitar esticamento */
+    }
+
+    .link-whatsapp img {
+        height: 55px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .formulario-fale-conosco {
+        width: 90%;
+        max-width: 400px;
+        top: 20%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    video {
+        object-fit: cover;
+    }
+}
