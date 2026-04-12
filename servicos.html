@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Mario Bros</title>
+    <link rel="icon" type="image/png" href="./imagem.img/cabeça-mario.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="mascara-formulario" onclick="esconderForm()"></div>
+
+    <div class="cabecalho" alt="logo-do-mario">
+
+        <a href="index.html"><img src="./imagem.img/cabeça-mario.png"></a>
+        <a href="index.html">Home</a>
+        <a href="servicos.html">Nossos Serviços</a>
+        <a onclick="mostrarForm()">Fale Conosco</a>
+
+    </div>
+
+    <!-- Background Animado idêntico -->
+    <div class="caixa-video">
+        <video src="./imagem.img/video.mp4" autoplay muted loop></video>
+        <div class="mascara"></div>
+    </div>
+
+    <div class="container-servicos">
+        <h1 class="titulo-servicos">Nossos Serviços Especializados</h1>
+        
+        <div class="grid-servicos">
+            
+            <div class="card-servico">
+                <h2>🔧 Desentupimento Express</h2>
+                <p>Ralos, pias e vasos entupidos? A gente resolve no tempo de um speed run!</p>
+                <div class="preco">➜ A partir de R$ XX,XX</div>
+            </div>
+
+            <div class="card-servico">
+                <h2>💧 Caça Vazamentos</h2>
+                <p>Detectamos vazamentos invisíveis com tecnologia de ponta. Nenhum desperdício passa batido!</p>
+                <div class="preco">➜ Orçamento grátis</div>
+            </div>
+
+            <div class="card-servico">
+                <h2>🚿 Hidrojateamento</h2>
+                <p>Limpeza profunda com jato de alta pressão. Deixa os canos mais limpos que o castelo da Peach!</p>
+                <div class="preco">➜ Consulte valores</div>
+            </div>
+
+            <div class="card-servico">
+                <h2>📦 Manutenção Preventiva</h2>
+                <p>Evite surpresas! Planos mensais de manutenção para sua casa ou empresa.</p>
+                <div class="preco">➜ Planos a partir de R$ XX,XX/mês</div>
+            </div>
+
+            <div class="card-servico">
+                <h2>🏢 Serviços Comerciais</h2>
+                <p>Soluções para condomínios, restaurantes, hotéis e empresas.</p>
+                <div class="preco">➜ Orçamento personalizado</div>
+            </div>
+
+            <div class="card-servico">
+                <h2>⚡ Emergência 24H</h2>
+                <p>Problema urgente? Atendemos qualquer hora, qualquer dia. It's-a me, Mario!</p>
+                <div class="preco">➜ Ligue agora: (21) 99867-5432</div>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="https://w.app/hvejfs" class="link-whatsapp">
+        <img src="./imagem.img/whatsapp.png" alt="link para o whatsapp">
+    </a>
+
+    <!-- Formulário Modal de Contato -->
+    <form class="formulario-fale-conosco"
+      action="https://formcarry.com/s/p2rb-tWtqyX"
+      method="POST"
+      enctype="multipart/form-data">
+
+        <input placeholder="Seu nome" type="text" name="nome">
+        <input placeholder="Seu telefone" type="text" name="telefone">
+        <textarea placeholder="Digite seu problema aqui..." name="duvida"></textarea>
+        <button type="submit">Pedir Orçamento</button>
+
+    </form>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
