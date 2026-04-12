@@ -9,7 +9,7 @@ function mostrarForm() {
 }
 
 function esconderForm() {
-    form.style.left = "-500px"
+    form.style.left = "-200vw"
     form.style.transform = "translateX(0)"
     mascara.style.visibility = "hidden" 
 }

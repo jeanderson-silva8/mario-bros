@@ -164,7 +164,7 @@ video {
     flex-direction: column;
     position: fixed;
     top: 40%;
-    left: -500px;
+    left: -200vw;
     padding: 20px;
     border-radius: 5px;
     gap: 20px;
@@ -259,7 +259,7 @@ textarea {
         width: 90%;
         max-width: 400px;
         top: 20%;
-        left: -500px;
+        left: -200vw;
     }
 
     input, textarea {
