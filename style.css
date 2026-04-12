@@ -348,3 +348,12 @@ textarea {
         font-size: 2.2rem;
     }
 }
+
+/* --- Efeito Crescimento Botao e Cursor --- */
+button, .preco {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+button:hover, .preco:hover {
+    transform: scale(1.1);
+}
