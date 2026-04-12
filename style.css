@@ -1,4 +1,4 @@
-* {
+ï»¿* {
 
     margin: 0;
     padding: 0;
@@ -273,7 +273,7 @@ textarea {
         object-fit: cover;
     }
 }
-/* --- Página de Serviços --- */
+/* --- Pï¿½gina de Serviï¿½os --- */
 .container-servicos {
     padding: 120px 50px 50px 50px;
     display: flex;
@@ -314,8 +314,7 @@ textarea {
     box-shadow: 0 10px 20px rgba(250, 5, 5, 0.4);
 }
 
-.card-servico h2 {
-    color: hsl(0, 98%, 43%);
+.card-servico h2 { color: white;
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
