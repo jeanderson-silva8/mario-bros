@@ -169,6 +169,7 @@ video {
     border-radius: 5px;
     gap: 20px;
     transition: left 1s ease-in-out;
+    z-index: 100;
 
 }
 
@@ -203,6 +204,7 @@ textarea {
     height: 100vh;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
     transition: visibility 1s ease-in-out;
+    z-index: 90;
 }
 
 /* --- Responsividade para Celulares e Tablets --- */
@@ -274,7 +276,7 @@ textarea {
         object-fit: cover;
     }
 }
-/* --- P�gina de Servi�os --- */
+/* --- Página de Serviços --- */
 .container-servicos {
     padding: 120px 50px 50px 50px;
     display: flex;
@@ -315,7 +317,8 @@ textarea {
     box-shadow: 0 10px 20px rgba(250, 5, 5, 0.4);
 }
 
-.card-servico h2 { color: white;
+.card-servico h2 {
+    color: white;
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -338,7 +341,7 @@ textarea {
 
 .cabecalho {
     position: relative;
-    z-index: 20;
+    z-index: 110;
 }
 
 @media (max-width: 850px) {
