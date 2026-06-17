@@ -277,66 +277,223 @@ textarea {
     }
 }
 /* --- Página de Serviços --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap');
+
 .container-servicos {
-    padding: 120px 50px 50px 50px;
+    padding: 120px 24px 80px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 10;
+    font-family: 'Outfit', sans-serif;
 }
 
+/* Título Retro 3D do Mario */
 .titulo-servicos {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #FCDB00; /* Amarelo Estrela */
+    margin-bottom: 60px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
     text-align: center;
+    display: inline-block;
+    position: relative;
+    text-shadow: 
+        3px 3px 0px #E52521, /* Vermelho Mario */
+        6px 6px 0px #2255A4, /* Azul Macacão */
+        9px 9px 15px rgba(0, 0, 0, 0.8);
 }
 
 .grid-servicos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
     width: 100%;
     max-width: 1200px;
+    perspective: 1000px;
+}
+
+/* Efeito Bloco Flutuante Clássico do Mario */
+@keyframes floatBlock {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
 
 .card-servico {
-    background: rgba(10, 12, 16, 0.85);
-    border: 2px solid hsl(0, 98%, 43%);
-    border-radius: 10px;
-    padding: 30px;
+    background: rgba(15, 17, 23, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px 25px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 340px;
+}
+
+/* Atribui animações flutuantes em tempos diferentes para parecer natural */
+.card-servico:nth-child(1) { animation: floatBlock 6s ease-in-out infinite; }
+.card-servico:nth-child(2) { animation: floatBlock 7s ease-in-out infinite 0.5s; }
+.card-servico:nth-child(3) { animation: floatBlock 6.5s ease-in-out infinite 1s; }
+.card-servico:nth-child(4) { animation: floatBlock 7.5s ease-in-out infinite 0.2s; }
+.card-servico:nth-child(5) { animation: floatBlock 6.2s ease-in-out infinite 0.8s; }
+.card-servico:nth-child(6) { animation: floatBlock 6.8s ease-in-out infinite 0.4s; }
+
+/* Detalhe estético: Barra de Cano de Mario/Luigi no topo do Card */
+.card-servico::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #E52521 0%, #FCDB00 50%, #2B9B3C 100%);
+    opacity: 0.8;
+}
+
+/* Código de cores das bordas e sombras por card temática */
+/* 1. Mario Red (Desentupimento) */
+.card-servico:nth-child(1) { border-bottom: 4px solid #E52521; }
+.card-servico:nth-child(1):hover { 
+    box-shadow: 0 20px 40px rgba(229, 37, 33, 0.25);
+    border-color: #E52521;
+}
+/* 2. Water Blue (Caça Vazamentos) */
+.card-servico:nth-child(2) { border-bottom: 4px solid #2255A4; }
+.card-servico:nth-child(2):hover { 
+    box-shadow: 0 20px 40px rgba(34, 85, 164, 0.3);
+    border-color: #2255A4;
+}
+/* 3. Luigi Green (Hidrojateamento) */
+.card-servico:nth-child(3) { border-bottom: 4px solid #2B9B3C; }
+.card-servico:nth-child(3):hover { 
+    box-shadow: 0 20px 40px rgba(43, 155, 60, 0.3);
+    border-color: #2B9B3C;
+}
+/* 4. Question Block Yellow (Manutenção) */
+.card-servico:nth-child(4) { border-bottom: 4px solid #FCDB00; }
+.card-servico:nth-child(4):hover { 
+    box-shadow: 0 20px 40px rgba(252, 219, 0, 0.25);
+    border-color: #FCDB00;
+}
+/* 5. Bowser Gray (Comercial) */
+.card-servico:nth-child(5) { border-bottom: 4px solid #6b7280; }
+.card-servico:nth-child(5):hover { 
+    box-shadow: 0 20px 40px rgba(107, 114, 128, 0.3);
+    border-color: #9ca3af;
+}
+/* 6. Fire Flower Orange (Emergência) */
+.card-servico:nth-child(6) { border-bottom: 4px solid #ff7a00; }
+.card-servico:nth-child(6):hover { 
+    box-shadow: 0 20px 40px rgba(255, 122, 0, 0.3);
+    border-color: #ff7a00;
 }
 
 .card-servico:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(250, 5, 5, 0.4);
+    transform: translateY(-15px) scale(1.03);
+    background: rgba(20, 24, 33, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    animation-play-state: paused; /* Para a flutuação ao passar o mouse */
 }
 
 .card-servico h2 {
     color: white;
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .card-servico p {
-    color: #dfdfdf;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    font-size: 1.1rem;
+    color: #d1d5db;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    font-weight: 400;
 }
 
+/* Botão de Preço com Estética de Bloco Premium */
 .card-servico .preco {
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 800;
     color: white;
-    background: hsl(0, 98%, 43%);
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: inline-block;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #E52521 0%, #b31411 100%);
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(229, 37, 33, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.5px;
+    margin-top: auto; /* Garante que o botão fique sempre no final */
+}
+
+/* Estilo do botão de preço diferente para cada cor de card no hover */
+.card-servico:nth-child(1):hover .preco {
+    background: linear-gradient(135deg, #E52521 0%, #ff4b47 100%);
+    box-shadow: 0 6px 20px rgba(229, 37, 33, 0.5);
+    transform: scale(1.05);
+}
+.card-servico:nth-child(2) .preco {
+    background: linear-gradient(135deg, #2255A4 0%, #153a75 100%);
+    box-shadow: 0 4px 15px rgba(34, 85, 164, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+.card-servico:nth-child(2):hover .preco {
+    background: linear-gradient(135deg, #2255A4 0%, #3a75d1 100%);
+    box-shadow: 0 6px 20px rgba(34, 85, 164, 0.5);
+    transform: scale(1.05);
+}
+.card-servico:nth-child(3) .preco {
+    background: linear-gradient(135deg, #2B9B3C 0%, #1c6b27 100%);
+    box-shadow: 0 4px 15px rgba(43, 155, 60, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+.card-servico:nth-child(3):hover .preco {
+    background: linear-gradient(135deg, #2B9B3C 0%, #3ec252 100%);
+    box-shadow: 0 6px 20px rgba(43, 155, 60, 0.5);
+    transform: scale(1.05);
+}
+.card-servico:nth-child(4) .preco {
+    background: linear-gradient(135deg, #d4a200 0%, #a17b00 100%);
+    box-shadow: 0 4px 15px rgba(252, 219, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+.card-servico:nth-child(4):hover .preco {
+    background: linear-gradient(135deg, #FCDB00 0%, #ffd000 100%);
+    color: #111;
+    text-shadow: none;
+    box-shadow: 0 6px 20px rgba(252, 219, 0, 0.5);
+    transform: scale(1.05);
+}
+.card-servico:nth-child(5) .preco {
+    background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
+    box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+.card-servico:nth-child(5):hover .preco {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    box-shadow: 0 6px 20px rgba(107, 114, 128, 0.5);
+    transform: scale(1.05);
+}
+.card-servico:nth-child(6) .preco {
+    background: linear-gradient(135deg, #ff7a00 0%, #c45e00 100%);
+    box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+.card-servico:nth-child(6):hover .preco {
+    background: linear-gradient(135deg, #ff9e47 0%, #ff7a00 100%);
+    box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5);
+    transform: scale(1.05);
 }
 
 .cabecalho {
@@ -346,18 +503,18 @@ textarea {
 
 @media (max-width: 850px) {
     .container-servicos {
-        padding: 50px 20px;
+        padding: 60px 20px;
     }
     .titulo-servicos {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
+        margin-bottom: 40px;
     }
-}
-
-/* --- Efeito Crescimento Botao e Cursor --- */
-button, .preco {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-button:hover, .preco:hover {
-    transform: scale(1.1);
+    .grid-servicos {
+        gap: 25px;
+    }
+    .card-servico {
+        min-height: auto;
+        padding: 30px 20px;
+        animation: none !important; /* Desativa flutuação em mobile para performance */
+    }
 }
